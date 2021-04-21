@@ -1,6 +1,6 @@
 <template>
 	<div class="simple-range-slider">
-		<div class="simple-range-slider-bg-bar" :style="{background: barColor, width: activeWidth}">
+		<div class="simple-range-slider-bg-bar" :style="{background: barColor}" :width="activeWidth">
 			<div class="simple-range-slider-bar" v-if="isRange" :style="barStyle" />
 			<div
 				v-if="popoverMerged"
