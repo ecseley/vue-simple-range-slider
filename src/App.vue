@@ -1,5 +1,5 @@
 <template>
-	<div dir="ltr" style="margin-left: 100px; font-size: 20px">
+	<div dir="ltr" style="margin-left: 100px; font-size: 20px" :width="activeWidth">
 		{{ value1 }}
 		<VueSimpleRangeSlider
 			style="width: 1000px"
