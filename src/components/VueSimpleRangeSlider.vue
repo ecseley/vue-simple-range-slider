@@ -1,6 +1,6 @@
 <template>
 	<div class="simple-range-slider">
-		<div class="simple-range-slider-bg-bar" :style="{background: barColor}" :width="activeWidth">
+		<div class="simple-range-slider-bg-bar" :style="{background: barColor}" :width="activeWidth" data-test="test">
 			<div class="simple-range-slider-bar" v-if="isRange" :style="barStyle" />
 			<div
 				v-if="popoverMerged"
@@ -436,7 +436,7 @@ export default class VueSimpleRangeSlider extends Vue {
 		if (this.$refs.input_ instanceof HTMLElement) {
 			this.dashInput = Number.parseInt(this.$refs.input_.style.width.replace('px', ''));
 		}
-        console.log('Active Width Prop: ' + this.activeWidth);
+		console.log('Active Width Prop: ' + this.activeWidth);
 	}
 
 	getStyle(el: HTMLElement, styleProp: string) {
