@@ -1,6 +1,6 @@
 <template>
     <div class="simple-range-slider">
-        <div class="simple-range-slider-bg-bar" :style="{background: barColor}">
+        <div class="simple-range-slider-bg-bar" :style="{background: barColor, width: activeWidth}">
             <div class="simple-range-slider-bar"
                  v-if="isRange"
                  :style="barStyle"
@@ -115,6 +115,7 @@
         @Prop({required: true}) value!: [number, number] | number;
         @Prop() activeBarColor?: string;
         @Prop() barColor?: string;
+        @Prop({default: 0}) activeWidth?: number;
 
         // Slider value and component internal value are inconsistent
         private get isNotSync() {
